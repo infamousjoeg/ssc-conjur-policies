@@ -6,6 +6,12 @@
     project_url: "https://github.com/infamousjoeg/ssc-conjur-policies"
     jenkins: true
   body:
+    - !variable
+      id: api_key
+      annotations:
+        description: API Key for host/ci/jenkins/conjur-policies
+        jenkins: true
+
     - !group
         annotations:
           editable: "true"
@@ -23,3 +29,9 @@
     - !grant
       role: !group
       member: !host
+
+    # Permit all hosts above to read and execute host api_key
+    - !permit
+      role: !host
+      privileges: [ read, execute ]
+      resource: !variable api_key
