@@ -1,0 +1,9 @@
+- !policy
+  id: ci
+  annotations:
+    description: All continuous improvement tooling policies
+
+- !policy
+  id: cd
+  annotations:
+    description: All continuous delivery tooling policies
