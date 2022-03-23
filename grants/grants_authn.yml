@@ -1,0 +1,5 @@
+# Grant the jenkins projects group to use the authn-jwt/jenkins authenticator web service
+- !grant
+  role: !group conjur/authn-jwt/jenkins/consumers
+  members:
+    - !group ci/jenkins/conjur-policies

@@ -1,0 +1,11 @@
+# To add users to admin group, update grants.yml policy file
+- !user
+  id: joe
+  annotations:
+    first_name: Joe
+    last_name: Garcia
+    full_name: Joe Garcia
+    email: joe.garcia@cyberark.com
+    title: DevOps Security Engineer
+    company: CyberArk
+    cyberark: true

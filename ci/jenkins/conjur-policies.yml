@@ -1,0 +1,25 @@
+- !policy
+  id: conjur-policies
+  owner: !group admins
+  annotations:
+    description: Jenkins project for Conjur Policy automation
+    project_url: "https://github.com/infamousjoeg/ssc-conjur-policies"
+    jenkins: true
+  body:
+    - !group
+        annotations:
+          editable: "true"
+
+    - !host
+      annotations:
+        description: Pipeline project in Jenkins to automatically load Conjur policy on change
+        jenkins: true
+        project_url: "https://github.com/infamousjoeg/ssc-conjur-policies"
+        authn-jwt/jenkins/jenkins_pronoun: Pipeline
+        authn-jwt/jenkins/jenkins_task_noun: Build
+        #authn-jwt/jenkins/identity: {aud}-{job}
+
+    # Grant all hosts in collection above to be members of projects group
+    - !grant
+      role: !group
+      member: !host

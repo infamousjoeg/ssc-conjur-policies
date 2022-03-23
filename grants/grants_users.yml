@@ -1,0 +1,8 @@
+# Grant admin group admin rights
+- !grant
+  role: !user admin
+  member: !group conjur-admins
+# Grant user collection membership to admin group
+- !grant
+  role: !group conjur-admins
+  member: !user joe
