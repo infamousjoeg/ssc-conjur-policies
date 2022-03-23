@@ -11,6 +11,7 @@ main () {
   load_policy root grants/grants_users.yml
   load_policy ci ci/jenkins/jenkins.yml
   load_policy ci/jenkins ci/jenkins/conjur-policies.yml
+  load_policy ci ci/github/github.yml
   load_policy root authn/authn-jwt-jenkins.yml
   load_policy root grants/grants_authn.yml
   load_policy root grants/grants_hosts.yml
