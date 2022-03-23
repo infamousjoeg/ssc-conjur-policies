@@ -1,0 +1,4 @@
+# Grant conjur-policies host admin rights
+- !grant
+  role: !group conjur-admins
+  member: !host ci/jenkins/conjur-policies
