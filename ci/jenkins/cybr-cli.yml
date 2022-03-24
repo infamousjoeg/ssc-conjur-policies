@@ -17,7 +17,7 @@
         project_url: "https://github.com/infamousjoeg/cybr-cli"
         # authn-jwt/jenkins/jenkins_pronoun: Pipeline
         # authn-jwt/jenkins/jenkins_task_noun: Build
-        # authn-jwt/jenkins/identity: 22ae10d252d8659adc2aeb3aa9960479-conjur-policies
+        authn-jwt/jenkins/identity: 22ae10d252d8659adc2aeb3aa9960479-cybr-cli
 
     # Grant all hosts in collection above to be members of the group
     - !grant
