@@ -23,3 +23,38 @@
     - !grant
       role: !group
       member: !host
+
+    - &variables
+      - !variable
+        id: pas/hostname
+        annotations:
+          cyberark: true
+      - !variable
+        id: pas/username
+        annotations:
+          cyberark: true
+      - !variable
+        id: pas/password
+        annotations:
+          cyberark: true
+      - !variable
+        id: ccp/client_cert
+        annotations:
+          cyberark: true
+      - !variable
+        id: ccp/client_key
+        annotations:
+          cyberark: true
+      - !variable
+        id: aws/access_key_id
+        annotations:
+          aws: true
+      - !variable
+        id: aws/secret_access_key
+        annotations:
+          aws: true
+
+    - !permit
+      role: !group
+      privileges: [ read, execute ]
+      resources: *variables
