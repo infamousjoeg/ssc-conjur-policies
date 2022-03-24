@@ -23,7 +23,7 @@
         project_url: "https://github.com/infamousjoeg/ssc-conjur-policies"
         authn-jwt/jenkins/jenkins_pronoun: Pipeline
         authn-jwt/jenkins/jenkins_task_noun: Build
-        #authn-jwt/jenkins/identity: {aud}-{job}
+        authn-jwt/jenkins/identity: 22ae10d252d8659adc2aeb3aa9960479-conjur-policies
 
     # Grant all hosts in collection above to be members of projects group
     - !grant
