@@ -1,0 +1,25 @@
+- !policy
+  id: cybr-cli
+  owner: !group admins
+  annotations:
+    description: Jenkins project for CyberArk CLI
+    project_url: "https://github.com/infamousjoeg/cybr-cli"
+    jenkins: true
+  body:
+    - !group
+        annotations:
+          editable: "true"
+
+    - !host
+      annotations:
+        description: Pipeline project in Jenkins to handle cybr-cli SDLC
+        jenkins: true
+        project_url: "https://github.com/infamousjoeg/cybr-cli"
+        # authn-jwt/jenkins/jenkins_pronoun: Pipeline
+        # authn-jwt/jenkins/jenkins_task_noun: Build
+        # authn-jwt/jenkins/identity: 22ae10d252d8659adc2aeb3aa9960479-conjur-policies
+
+    # Grant all hosts in collection above to be members of the group
+    - !grant
+      role: !group
+      member: !host

@@ -3,3 +3,4 @@
   role: !group conjur/authn-jwt/jenkins/consumers
   members:
     - !group ci/jenkins/conjur-policies
+    - !group ci/jenkins/cybr-cli
