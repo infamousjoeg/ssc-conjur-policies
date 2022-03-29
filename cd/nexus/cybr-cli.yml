@@ -1,0 +1,19 @@
+- !policy
+  id: cybr-cli
+  owner: !group admins
+  annotations:
+    description: Nexus secrets for CyberArk CLI deployment to apt-hosted
+    project_url: "https://github.com/infamousjoeg/cybr-cli"
+  body:
+    - &variables
+      - !variable apt-hosted/username
+      - !variable apt-hosted/password
+
+    - !host
+      annotations:
+        description: Identity to access apt-hosted repository credentials to deploy cybr-cli binary releases
+
+    - !permit
+      role: !host
+      privileges: [ read, execute ]
+      resources: *variables

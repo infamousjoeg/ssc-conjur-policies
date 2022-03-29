@@ -1,0 +1,15 @@
+- !policy
+  id: nexus
+  body:
+    # Create group for admins
+    - !group
+      id: admins
+      annotations:
+        description: Allows full access to all policies on nexus branch.
+        editable: "true"
+
+    # Grant conjur-admins to be nexus/admins
+    - !grant
+      role: !group admins
+      members:
+        - !group /conjur-admins
