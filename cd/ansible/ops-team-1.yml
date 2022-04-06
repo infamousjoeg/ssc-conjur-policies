@@ -8,6 +8,7 @@
     - &variables
       - !variable aws/access_key_id
       - !variable aws/secret_access_key
+      - !variable aws/ssh_private_key
 
     # host/cd/ansible/ops-team-1
     - !host
