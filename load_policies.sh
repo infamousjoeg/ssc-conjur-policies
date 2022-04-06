@@ -15,6 +15,8 @@ main () {
   load_policy ci ci/github/github.yml
   load_policy cd cd/nexus/nexus.yml
   load_policy cd/nexus cd/nexus/cybr-cli.yml
+  load_policy cd cd/ansible/ansible.yml
+  load_policy cd/ansible cd/ansible/ops-team-1.yml
   load_policy root authn/authn-jwt-jenkins.yml
   load_policy root grants/grants_cd.yml
   load_policy root grants/grants_authn.yml
