@@ -53,6 +53,14 @@
         id: aws/secret_access_key
         annotations:
           aws: true
+      - !variable
+        id: ansible/username
+        annotations:
+          ansible: true
+      - !variable
+        id: ansible/password
+        annotations:
+          ansible: true
 
     - !permit
       role: !group
